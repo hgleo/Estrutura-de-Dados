@@ -19,4 +19,5 @@ typedef struct lista{
 }lista;
 
 ### Exemplo 1: Verificar se um elemento x existe na lista
+
 ### Mais exemplos no drive

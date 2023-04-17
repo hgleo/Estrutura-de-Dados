@@ -7,8 +7,10 @@
 
 typedef struct lista {
 
+
   int info;
   struct lista *prox;
+
 } lista;
 
 int existe(lista *l, int x){
@@ -86,7 +88,7 @@ void inserirFinal(lista **l, int x){
   
 }
 */
-
+/*
 lista *removerElemento(lista *l, int x) {
 
   if (l == NULL) {
@@ -115,7 +117,22 @@ lista *removerElemento(lista *l, int x) {
 
   return l;
 }
+*/
 
+lista* removerElemento(lista *l,int x){
+  if(l != NULL ){
+    if( l->info == x){
+      lista *aux = l->prox;
+      free(l);
+      return aux;
+    }
+    else{
+      l->prox = removerElemento(l->prox,x);
+    }
+  }
+  return l;
+
+}
 int main(){
 
   lista *l = NULL;
@@ -124,12 +141,13 @@ int main(){
   l = inserirFinal(l, 10);
   l = inserirFinal(l, 4);
   l = inserirFinal(l, 2);
+  l = inserirFinal(l, 4);
 
   imprimeLista(l);
 
   printf("\n 0 se não existe 1 caso exista: %d ", existe(l, 2));
   printf("\n 0 se não existe 1 caso exista: %d ", existe(l, 3));
-  printf("\n Qts vezes o numero %d se repete: %d ", 2 ,contaRecorrencia(l, 2));
+  printf("\n Qts vezes o numero %d se repete: %d ", 2 ,contaRecorrencia(l, 4));
 
   printf("\nSomatório: %d ", somatorioLista(l));
 

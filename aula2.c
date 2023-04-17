@@ -116,7 +116,6 @@ lista *removerElemento(lista *l, int x) {
   return l;
 }
 
-
 int main(){
 
   lista *l = NULL;

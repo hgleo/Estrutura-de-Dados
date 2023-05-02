@@ -36,12 +36,12 @@
 
 ## Rotação pra Direita dupla (Seja p o nó desbalanceado)
 
-### Rotação Direita (b)
+### Rotação Direita simples (b)
 
-### Rotação Esquerda(p)
+### Rotação Esquerda simples(p)
 
 ## Rotação pra Esquerda dupla (Seja p o nó desbalanceado)
 
-### Rotação Esquerda (b)
+### Rotação Esquerda simples (b)
 
-### Rotação Direita (p)
+### Rotação Direita  (p)
